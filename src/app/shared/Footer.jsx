@@ -61,7 +61,7 @@ export default function Footer() {
             <ul className="space-y-2 text-gray-400">
               <li className="flex items-center gap-2">
                 <FaPhone className="text-blue-400" />
-                <span>051-5451101</span>
+                <span>+92 51 8777600</span>
               </li>
               <li className="flex items-center gap-2">
                 <FaEnvelope className="text-blue-400" />
@@ -69,7 +69,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-2">
                 <FaMapMarkerAlt className="text-blue-400" />
-                <span>Rawalpindi, Punjab, Pakistan</span>
+                <span>761, Lane 7-E, Gulistan Colony, Near Joyland, Rawalpindi</span>
               </li>
             </ul>
           </div>
