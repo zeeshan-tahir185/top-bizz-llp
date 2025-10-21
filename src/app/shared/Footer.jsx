@@ -12,7 +12,7 @@ export default function Footer() {
               <img src="/images/logo.png" alt="" className='w-[120px]' />
             </Link>
             <p className="text-gray-400 text-base mb-6">
-              Your trusted partner for General Order Supplies, Import-Export solutions, and Government in Rawalpindi, Pakistan.
+              Your trusted partner for general order supplies, Import-export solutions, software development and much more!
             </p>
             <div className="flex gap-4">
               <a href="#" className="text-gray-400 hover:text-blue-400 transition">

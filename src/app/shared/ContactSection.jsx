@@ -60,7 +60,7 @@ export default function ContactSection() {
                         <div className="flex flex-col gap-4">
                             <div className="flex items-center gap-3">
                                 <FaPhoneAlt className="text-blue-600 text-xl" />
-                                <span className="text-gray-700">+92 51 5451101</span>
+                                <span className="text-gray-700">+92 51 8777600</span>
                             </div>
                             <div className="flex items-center gap-3">
                                 <FaEnvelope className="text-blue-600 text-xl" />
@@ -68,8 +68,7 @@ export default function ContactSection() {
                             </div>
                             <div className="flex items-center gap-3">
                                 <FaCommentDots className="text-blue-600 text-xl" />
-                                <span className="text-gray-700">28/A, Jhelum Road, Morgah Morr, Near Hunain Hotel,
-                                    Rawalpindi, 46000, Punjab, Pakistan</span>
+                                <span className="text-gray-700">761, Lane 7-E, Gulistan Colony, Near Joyland, Rawalpindi</span>
                             </div>
                         </div>
                     </div>
