@@ -857,8 +857,8 @@ useEffect(() => {
                     <div className="testimonial-author">
                         <div className="author-avatar">AS</div>
                         <div className="author-info">
-                            <h4>Dr. Ahmed Shah</h4>
-                            <p>Principal, STEM College Quetta</p>
+                            <h4>Ahmed Shah</h4>
+                            <p>STEM College Quetta</p>
                         </div>
                     </div>
                 </div>
@@ -871,7 +871,7 @@ useEffect(() => {
                         <div className="author-avatar">SR</div>
                         <div className="author-info">
                             <h4>Sarah Rehman</h4>
-                            <p>IT Administrator, Karachi STEM Institute</p>
+                            <p>Karachi STEM Institute</p>
                         </div>
                     </div>
                 </div>
@@ -883,8 +883,8 @@ useEffect(() => {
                     <div className="testimonial-author">
                         <div className="author-avatar">MK</div>
                         <div className="author-info">
-                            <h4>Prof. Muhammad Khalid</h4>
-                            <p>Director, Pakistan Science Foundation</p>
+                            <h4>Muhammad Khalid</h4>
+                            <p>Pakistan Science Foundation</p>
                         </div>
                     </div>
                 </div>
