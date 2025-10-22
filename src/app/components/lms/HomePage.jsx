@@ -858,7 +858,7 @@ useEffect(() => {
                         <div className="author-avatar">AS</div>
                         <div className="author-info">
                             <h4>Ahmed Shah</h4>
-                            <p>STEM College Quetta</p>
+                            <p>XYZ, ABC</p>
                         </div>
                     </div>
                 </div>
@@ -871,7 +871,7 @@ useEffect(() => {
                         <div className="author-avatar">SR</div>
                         <div className="author-info">
                             <h4>Sarah Rehman</h4>
-                            <p>Karachi STEM Institute</p>
+                            <p>XYZ, ABC</p>
                         </div>
                     </div>
                 </div>
@@ -884,7 +884,7 @@ useEffect(() => {
                         <div className="author-avatar">MK</div>
                         <div className="author-info">
                             <h4>Muhammad Khalid</h4>
-                            <p>Pakistan Science Foundation</p>
+                            <p>XYZ, ABC</p>
                         </div>
                     </div>
                 </div>
