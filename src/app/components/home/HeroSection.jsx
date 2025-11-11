@@ -15,7 +15,7 @@ export default function HeroSection() {
       </div>
       <div className="relative max-w-[1440px] w-full mx-auto px-4 text-center">
         <h1 className="text-4xl md:text-6xl !font-extrabold text-white mb-6 tracking-tight">
-          Innovate with TOP BIZ LLP
+          Innovate with TOP BIZ LLPs
         </h1>
         <p className="text-base md:text-lg text-white max-w-3xl mx-auto mb-10 leading-relaxed opacity-90">
           At Top Biz LLP, our vision is simple: to drive progress and innovation through the delivery of advanced technology solutions. From our partnerships with government to sourcing cutting-edge machinery and robotics, we’re dedicated to supporting Pakistan's growth in technology.
