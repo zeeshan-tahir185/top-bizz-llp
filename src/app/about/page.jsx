@@ -10,7 +10,7 @@ import Footer from '../shared/Footer'
 
 const page = () => {
   return (
-    <div className=''>
+    <div className='pt-[90px]'>
       <Navbar />
       <GeneralHeroSection title="About Us"  />
       <AboutSection />

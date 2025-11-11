@@ -1,65 +1,121 @@
 "use client";
-import Link from 'next/link';
-import { Card, Button } from 'antd';
-import { FaTools, FaRobot, FaMicrochip } from 'react-icons/fa';
+import Link from "next/link";
+import { motion } from "framer-motion";
+import { FaRobot, FaMicrochip, FaShip, FaTools } from "react-icons/fa";
 
 export default function ServicesSection() {
   const services = [
     {
-      title: 'General Order Supplier',
+      title: "Robotics & Automation Solutions",
       description:
-        'We source and deliver high-quality equipment, from office essentials to advanced machinery, optical cables, and robotics spares, ensuring reliability and precision.',
-      icon: <FaTools className="text-4xl text-blue-600" />,
+        "We supply cutting-edge robotics and drones, alongside custom R&D solutions, to enhance industrial automation and surveillance with advanced technology.",
+      icon: <FaRobot className="!text-4xl !text-[#2A338E]" />,
     },
     {
-      title: 'Robotics & Automation Solutions',
+      title: "Electronics Engineering Services",
       description:
-        'We supply cutting-edge robotics and drones, alongside custom R&D solutions, to enhance industrial automation and surveillance with advanced technology.',
-      icon: <FaRobot className="text-4xl text-blue-600" />,
+        "Our expertise in RF circuits, DSP, FPGA design, and embedded systems delivers innovative solutions for military, medical, and commercial applications.",
+      icon: <FaMicrochip className="!text-4xl !text-[#2A338E]" />,
     },
     {
-      title: 'Electronics Engineering Services',
+      title: "Naval Engineering & Platform Integration",
       description:
-        'Our expertise in RF circuits, DSP, FPGA design, and embedded systems delivers innovative solutions for military, medical, and commercial applications.',
-      icon: <FaMicrochip className="text-4xl text-blue-600" />,
+        "Our engineering division provides design support, integration, and modernization services for naval vessels and marine platforms.",
+      icon: <FaShip className="!text-4xl !text-[#2A338E]" />,
+    },
+    {
+      title: "Legacy Systems Modernisation & Reverse Engineering",
+      description:
+        "We restore, upgrade, and re-engineer obsolete naval and marine subsystems through advanced reverse-engineering tools.",
+      icon: <FaTools className="!text-4xl !text-[#2A338E]" />,
     },
   ];
 
   return (
-    <section className="py-16 bg-gray-100">
-      <div className="max-w-[1440px] w-full mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl !font-bold text-gray-800 text-center mb-12">
+    <section className="!py-20 !bg-gradient-to-b from-white via-[#f8f9ff] to-[#eef0ff] relative overflow-hidden">
+      {/* Floating gradient particles for cinematic background animation */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {[...Array(20)].map((_, i) => (
+          <motion.span
+            key={i}
+            className="absolute w-2 h-2 rounded-full !bg-gradient-to-r from-[#2A338E] to-[#B52B32] opacity-40 blur-[3px]"
+            animate={{
+              y: [0, -60, 0],
+              x: [0, 30, 0],
+              opacity: [0.3, 0.8, 0.3],
+              scale: [1, 1.3, 1],
+            }}
+            transition={{
+              duration: 7 + i * 0.3,
+              repeat: Infinity,
+              delay: i * 0.25,
+              ease: "easeInOut",
+            }}
+            style={{
+              top: `${Math.random() * 90}%`,
+              left: `${Math.random() * 90}%`,
+            }}
+          />
+        ))}
+      </div>
+
+      <div className="max-w-[1440px] w-full mx-auto px-4 relative z-10">
+        {/* Heading */}
+        <motion.h2
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true }}
+          className="!text-3xl md:!text-4xl !font-extrabold !text-[#2A338E] text-center !mb-14"
+        >
           Our Services
-        </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        </motion.h2>
+
+        {/* Cards Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {services.map((service, index) => (
-            <Card
+            <motion.div
               key={index}
-              hoverable
-              className="shadow-md border-0 rounded-lg overflow-hidden"
-              bodyStyle={{ padding: '24px' }}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 0.6,
+                delay: index * 0.2,
+                ease: "easeOut",
+              }}
+              viewport={{ once: true }}
+              whileHover={{
+                scale: 1.05,
+                boxShadow:
+                  "0 0 35px rgba(42,51,142,0.25), 0 0 50px rgba(181,43,50,0.15)",
+              }}
+              className="!bg-white/80 !backdrop-blur-sm !rounded-2xl !shadow-lg !p-6 flex flex-col items-center text-center 
+              !transition-all !duration-300 border border-transparent hover:!border-[#2A338E]/20 hover:!bg-white"
             >
-              <div className="flex flex-col items-center text-center">
-                <div className="mb-4">{service.icon}</div>
-                <h3 className="text-xl font-semibold text-gray-800 mb-3">
-                  {service.title}
-                </h3>
-                <p className="text-gray-600 text-base mb-4">
-                  {service.description}
-                </p>
-              </div>
-            </Card>
+              <div className="!mb-4">{service.icon}</div>
+              <h3 className="!text-xl !font-semibold !text-[#2A338E] !mb-3">
+                {service.title}
+              </h3>
+              <p className="!text-gray-700 !text-base leading-relaxed">
+                {service.description}
+              </p>
+            </motion.div>
           ))}
         </div>
-        <div className="text-center mt-12">
+
+        {/* Button */}
+        <div className="text-center mt-14">
           <Link href="/services">
-            <Button
-              type="primary"
-              size="large"
-              className="bg-blue-600 hover:!bg-blue-700"
+            <motion.button
+              whileHover={{
+                scale: 1.05,
+                boxShadow: "0 0 25px rgba(42,51,142,0.5)",
+              }}
+              className="!bg-gradient-to-r !from-[#2A338E] !to-[#B52B32] !text-white !font-semibold px-10 py-3 !rounded-full 
+              !transition-all !duration-300 !shadow-md hover:!shadow-lg"
             >
               View All Services
-            </Button>
+            </motion.button>
           </Link>
         </div>
       </div>

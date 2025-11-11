@@ -1,6 +1,6 @@
 "use client";
-import { Card, Button } from 'antd';
-import Link from 'next/link';
+import Link from "next/link";
+import { motion } from "framer-motion";
 import {
   FaTools,
   FaMicrochip,
@@ -10,113 +10,159 @@ import {
   FaRobot,
   FaSatelliteDish,
   FaHospital,
-} from 'react-icons/fa';
+  FaShip,
+} from "react-icons/fa";
 
-export default function ServicesSection() {
+export default function ServicesPage() {
   const services = [
     {
-      title: 'General Order Supplier',
+      title: "Robotics & Automation Solutions",
       description:
-        'Sourcing high-quality equipment from office essentials to advanced machinery, optical cables, and robotics spares with reliability and precision.',
-      icon: <FaTools className="text-4xl text-blue-600" />,
-      link:"#"
+        "Supplying advanced robotics and drones, plus custom R&D solutions for industrial automation and surveillance.",
+      icon: <FaRobot className="!text-4xl !text-[#2A338E]" />,
+      link: "#",
     },
     {
-      title: 'Electronics Repair Services',
+      title: "Electronics Engineering Services",
       description:
-        'Restoring industrial and medical electronics like control equipment and telecom devices for minimal downtime and maximum efficiency.',
-      icon: <FaMicrochip className="text-4xl text-blue-600" />,
-      link:"#"
+        "Designing RF circuits, DSP, FPGA, and embedded systems for military, medical, and commercial applications.",
+      icon: <FaCogs className="!text-4xl !text-[#2A338E]" />,
+      link: "#",
     },
     {
-      title: 'STEM Education Platform',
+      title: "Naval Engineering & Platform Integration",
       description:
-        'Offering scalable LMS deployment with role-based access, interactive content tools, and secure data management for universities and training centers.',
-      icon: <FaWrench className="text-4xl text-blue-600" />,
-      link:"/lms"
+        "Design support, integration, and modernization for naval vessels and marine platforms, ensuring operational and safety standards.",
+      icon: <FaShip className="!text-4xl !text-[#2A338E]" />,
+      link: "#",
     },
     {
-      title: 'PCB Design & Assembly',
+      title: "Legacy Systems Modernisation & Reverse Engineering",
       description:
-        'Delivering high-speed, multi-layer PCBs for sensitive applications with comprehensive DFM/DFT reviews for prototypes and production.',
-      icon: <FaCogs className="text-4xl text-blue-600" />,
-      link:"#"
+        "Restoring and upgrading obsolete naval and marine subsystems with advanced reverse-engineering tools.",
+      icon: <FaSearch className="!text-4xl !text-[#2A338E]" />,
+      link: "#",
     },
     {
-      title: 'Reverse Engineering Services',
+      title: "General Order Supplier",
       description:
-        'Revitalizing obsolete tech with schematic recreation and upgrades for industrial, biomedical, and telecom systems.',
-      icon: <FaSearch className="text-4xl text-blue-600" />,
-      link:"#"
+        "Sourcing high-quality equipment from office essentials to advanced machinery, optical cables, and robotics spares.",
+      icon: <FaTools className="!text-4xl !text-[#2A338E]" />,
+      link: "#",
     },
     {
-      title: 'Robotics & Automation',
+      title: "Electronics Repair Services",
       description:
-        'Supplying advanced robotics and drones, plus custom R&D solutions for industrial automation and surveillance.',
-      icon: <FaRobot className="text-4xl text-blue-600" />,
-      link:"#"
+        "Restoring industrial and medical electronics like control equipment and telecom devices for minimal downtime.",
+      icon: <FaMicrochip className="!text-4xl !text-[#2A338E]" />,
+      link: "#",
     },
     {
-      title: 'Electronics Engineering',
+      title: "STEM Education Platform",
       description:
-        'Designing RF circuits, DSP, FPGA, and embedded systems for military, medical, and commercial applications.',
-      icon: <FaCogs className="text-4xl text-blue-600" />,
-      link:"#"
+        "Offering scalable LMS deployment with role-based access, interactive content tools, and secure data management.",
+      icon: <FaWrench className="!text-4xl !text-[#2A338E]" />,
+      link: "/lms",
     },
     {
-      title: 'Specialized Products',
+      title: "PCB Design & Assembly",
       description:
-        'Offering innovative tech like LiDAR surveillance stations, smart weather stations, and rugged vehicles for critical applications.',
-      icon: <FaSatelliteDish className="text-4xl text-blue-600" />,
-      link:"#"
+        "Delivering high-speed, multi-layer PCBs for sensitive applications with comprehensive DFM/DFT reviews.",
+      icon: <FaCogs className="!text-4xl !text-[#2A338E]" />,
+      link: "#",
     },
     {
-      title: 'Hospital Supply Solutions',
+      title: "Specialized Products",
       description:
-        'Providing dental materials, medical equipment, and general hospital supplies with competitive pricing and reliability.',
-      icon: <FaHospital className="text-4xl text-blue-600" />,
-      link:"#"
+        "Offering innovative tech like LiDAR surveillance stations, smart weather stations, and rugged vehicles.",
+      icon: <FaSatelliteDish className="!text-4xl !text-[#2A338E]" />,
+      link: "#",
+    },
+    {
+      title: "Hospital Supply Solutions",
+      description:
+        "Providing dental materials, medical equipment, and general hospital supplies with reliability.",
+      icon: <FaHospital className="!text-4xl !text-[#2A338E]" />,
+      link: "#",
     },
   ];
 
   return (
-    <section className="py-16 bg-gradient-to-b from-gray-50 to-white">
-      <div className="max-w-[1440px] mx-auto w-full px-4">
-        <h2 className="mb-12 text-center text-3xl !font-bold text-gray-800 md:text-4xl">
+    <section className="!py-20 !bg-black/5 relative overflow-hidden">
+      {/* Floating particles */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {[...Array(20)].map((_, i) => (
+          <motion.span
+            key={i}
+            className="absolute w-2 h-2 rounded-full !bg-gradient-to-r from-[#2A338E] to-[#B52B32] opacity-70 blur-[2px]"
+            animate={{
+              y: [0, -40, 0],
+              x: [0, 20, 0],
+              opacity: [0.4, 0.8, 0.4],
+              scale: [1, 1.2, 1],
+            }}
+            transition={{
+              duration: 6 + i * 0.3,
+              repeat: Infinity,
+              delay: i * 0.1,
+              ease: "easeInOut",
+            }}
+            style={{
+              top: `${Math.random() * 90}%`,
+              left: `${Math.random() * 90}%`,
+            }}
+          />
+        ))}
+      </div>
+
+      <div className="max-w-[1440px] mx-auto px-4 relative z-10">
+        <motion.h2
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true }}
+          className="!text-3xl md:!text-4xl !font-extrabold !text-[#2A338E] text-center !mb-12"
+        >
           Our Comprehensive Services
-        </h2>
-        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        </motion.h2>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <Card
+            <motion.div
               key={index}
-              hoverable
-              className="relative overflow-hidden rounded-lg border-0 shadow-lg transition-transform hover:-translate-y-2"
-              bodyStyle={{ padding: '24px' }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 0.6,
+                delay: index * 0.15,
+                ease: "easeOut",
+              }}
+              viewport={{ once: true }}
+              className="!bg-white !rounded-xl !shadow-xl !p-6 flex flex-col items-center text-center !transition-all !duration-300 hover:!scale-105 hover:!shadow-[0_0_25px_rgba(42,51,142,0.3)] relative overflow-hidden"
             >
-              <Link href={service.link} style={{textDecoration:"none"}}>
-              <div className="absolute right-0 top-0 h-16 w-16 bg-blue-100 opacity-20 rounded-bl-full"></div>
-              <div className="flex flex-col items-center text-center">
-                <div className="mb-4">{service.icon}</div>
-                <h3 className="mb-3 text-lg font-semibold text-gray-800 md:text-xl">
+              <Link href={service.link} className="!no-underline">
+                <div className="absolute right-0 top-0 h-16 w-16 !bg-[#2A338E]/10 rounded-bl-full"></div>
+                <div className="!mb-4">{service.icon}</div>
+                <h3 className="!text-xl !font-semibold !text-[#2A338E] !mb-3">
                   {service.title}
                 </h3>
-                <p className="mb-4 text-sm text-gray-600 md:text-base">
-                  {service.description}
-                </p>
-              </div>
+                <p className="!text-gray-700 !text-base">{service.description}</p>
               </Link>
-            </Card>
+            </motion.div>
           ))}
         </div>
+
         <div className="mt-12 text-center">
           <Link href="/contact">
-            <Button
-              type="primary"
-              size="large"
-              className="bg-blue-600 hover:!bg-blue-700"
+            <motion.button
+              whileHover={{
+                scale: 1.05,
+                boxShadow: "0 0 25px rgba(42,51,142,0.6)",
+              }}
+              className="!bg-gradient-to-r !from-[#2A338E] !to-[#B52B32] !text-white !font-semibold px-8 py-3 !rounded-full !transition-all !duration-300"
             >
               Get in Touch
-            </Button>
+            </motion.button>
           </Link>
         </div>
       </div>
