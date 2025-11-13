@@ -12,7 +12,7 @@ const page = () => {
   return (
     <div className='pt-[90px]'>
       <Navbar />
-      <GeneralHeroSection title="About Us"  />
+      {/* <GeneralHeroSection title="About Us"  /> */}
       <AboutSection />
       <MissionSection />
       <VisionSection />
