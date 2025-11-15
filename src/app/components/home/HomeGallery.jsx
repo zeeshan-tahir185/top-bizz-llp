@@ -8,8 +8,8 @@ const images = [
   "/images/data/img1.jpg",
   "/images/data/img5.jpg",
   "/images/data/img7.jpg",
-  "/images/data/img4.jpg",
-  "/images/data/img10.jpg",
+  "/images/data/img36.png",
+  "/images/data/img37.png",
   "/images/data/img6.jpg",
 ];
 
