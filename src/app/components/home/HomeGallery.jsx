@@ -5,12 +5,9 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 
 const images = [
-  "/images/data/img1.jpg",
-  "/images/data/img5.jpg",
-  "/images/data/img7.jpg",
-  "/images/data/img36.png",
-  "/images/data/img37.png",
-  "/images/data/img6.jpg",
+  '/images/data/img38.jpeg','/images/data/img39.jpeg','/images/data/img40.jpeg','/images/data/img41.jpeg',
+  '/images/data/img42.jpeg','/images/data/img43.jpeg','/images/data/img44.jpeg','/images/data/img45.jpeg',
+  '/images/data/img46.jpeg','/images/data/img47.jpeg','/images/data/img48.jpeg','/images/data/img49.jpeg',
 ];
 
 const HomeGallery = () => {
