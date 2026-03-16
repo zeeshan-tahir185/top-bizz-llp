@@ -13,8 +13,8 @@ const images = [
   // '/images/data/img16.jpg', '/images/data/img34.png', '/images/data/img17.jpg', '/images/data/img18.jpg',
   // '/images/data/img19.jpg', '/images/data/img20.jpg', '/images/data/img21.jpg','/images/data/img48.jpeg','/images/data/img49.jpeg',
   // '/images/data/img22.jpg', '/images/data/img24.jpg',
-  '/images/data/img25.jpg', '/images/data/img26.jpg',  '/images/data/img30.jpg',
-  '/images/data/img31.jpg',
+  // '/images/data/img25.jpg', '/images/data/img26.jpg',  '/images/data/img30.jpg',
+  // '/images/data/img31.jpg',
 ];
 
 const Gallery = () => {
