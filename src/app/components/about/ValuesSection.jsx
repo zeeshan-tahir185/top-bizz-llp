@@ -7,39 +7,39 @@ export default function ValuesSection() {
     {
       title: 'Innovation',
       description: 'We drive progress through cutting-edge technology and creative solutions.',
-      icon: <FaLightbulb className="!text-3xl !text-blue-600" />,
+      icon: <FaLightbulb className="!text-3xl !text-[#0db1ff]" />,
     },
     {
       title: 'Quality',
       description: 'We deliver high-standard products and services with precision.',
-      icon: <FaAward className="!text-3xl !text-blue-600" />,
+      icon: <FaAward className="!text-3xl !text-[#0db1ff]" />,
     },
     {
       title: 'Integrity',
       description: 'We uphold trust and transparency in all our partnerships.',
-      icon: <FaShieldAlt className="!text-3xl !text-blue-600" />,
+      icon: <FaShieldAlt className="!text-3xl !text-[#0db1ff]" />,
     },
     {
       title: 'Team Work',
       description: 'We collaborate with partners and clients for shared success.',
-      icon: <FaUsers className="!text-3xl !text-blue-600" />,
+      icon: <FaUsers className="!text-3xl !text-[#0db1ff]" />,
     },
     {
       title: 'Continuous Growth',
       description: 'We strive for constant improvement and industry leadership.',
-      icon: <FaChartLine className="!text-3xl !text-blue-600" />,
+      icon: <FaChartLine className="!text-3xl !text-[#0db1ff]" />,
     },
     {
       title: 'Customer Focus',
       description: 'We tailor solutions to meet our clients’ unique needs.',
-      icon: <FaHeart className="!text-3xl !text-blue-600" />,
+      icon: <FaHeart className="!text-3xl !text-[#0db1ff]" />,
     },
   ];
 
   return (
     <section className="!relative !py-20 !bg-gradient-to-br !from-gray-50 !to-white !overflow-hidden">
       {/* Animated background blobs */}
-      <div className="!absolute !top-16 !right-16 !w-44 !h-44 !bg-blue-200/40 !rounded-full !blur-3xl !animate-pulse"></div>
+      <div className="!absolute !top-16 !right-16 !w-44 !h-44 !bg-[#0db1ff]/25 !rounded-full !blur-3xl !animate-pulse"></div>
       <div className="!absolute !bottom-16 !left-16 !w-60 !h-60 !bg-cyan-200/40 !rounded-full !blur-3xl !animate-pulse"></div>
 
       <div className="!relative !max-w-[1440px] !w-full !mx-auto !px-6 !flex !flex-col md:!flex-row !items-center !gap-12">
@@ -77,7 +77,7 @@ export default function ValuesSection() {
                 >
                   <div className="!mt-2">{value.icon}</div>
                   <div>
-                    <h3 className="!text-lg !font-semibold !text-blue-600">{value.title}</h3>
+                    <h3 className="!text-lg !font-semibold !text-[#0a1f4b]">{value.title}</h3>
                     <p className="!text-sm !text-gray-700 !leading-relaxed">{value.description}</p>
                   </div>
                 </motion.div>

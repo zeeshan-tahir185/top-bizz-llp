@@ -6,7 +6,7 @@ export default function VisionSection() {
   return (
     <section className="!relative !py-20 !bg-gradient-to-br !from-white !to-gray-100 !overflow-hidden">
       {/* Decorative background gradient blobs */}
-      <div className="!absolute !top-20 !right-20 !w-44 !h-44 !bg-blue-200/40 !rounded-full !blur-3xl"></div>
+      <div className="!absolute !top-20 !right-20 !w-44 !h-44 !bg-[#0db1ff]/25 !rounded-full !blur-3xl"></div>
       <div className="!absolute !bottom-20 !left-20 !w-60 !h-60 !bg-cyan-200/40 !rounded-full !blur-3xl"></div>
 
       <div className="!relative !max-w-[1440px] !w-full !mx-auto !px-6 !flex !flex-col md:!flex-row-reverse !items-center !gap-12">
@@ -33,7 +33,7 @@ export default function VisionSection() {
         >
           <div className="!bg-white/70 !backdrop-blur-lg !p-8 !rounded-3xl">
             <h2 className="!text-3xl md:!text-4xl !font-extrabold !text-gray-800 !mb-6 !flex !items-center !gap-3">
-              <FaEye className="!text-blue-600 !text-4xl" />
+              <FaEye className="!text-[#0db1ff] !text-4xl" />
               Our Vision
             </h2>
             <p className="!text-base md:!text-lg !leading-relaxed !text-gray-700 !mb-4">
