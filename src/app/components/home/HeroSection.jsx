@@ -30,7 +30,7 @@ export default function HeroSection() {
         {[...Array(12)].map((_, i) => (
           <motion.span
             key={i}
-            className="absolute w-2 h-2 rounded-full !bg-gradient-to-r !from-[#0a1f4b] !to-[#0db1ff] !opacity-70 blur-[2px]"
+            className="absolute w-2 h-2 rounded-full !bg-gradient-to-r !from-[#2A338E] !to-[#B52B32] !opacity-70 blur-[2px]"
             animate={{
               y: [0, -40, 0],
               x: [0, 20, 0],
@@ -66,7 +66,7 @@ export default function HeroSection() {
               TOP BIZ LLP
             </span>
             {/* Glowing underline effect */}
-            <span className="absolute left-0 right-0 bottom-0 h-[3px] !bg-gradient-to-r !from-[#0a1f4b] !to-[#0db1ff] rounded-full blur-[2px] animate-pulse" />
+            <span className="absolute left-0 right-0 bottom-0 h-[3px] !bg-gradient-to-r !from-[#2A338E] !to-[#B52B32] rounded-full blur-[2px] animate-pulse" />
           </span>
         </motion.h1>
 
@@ -95,7 +95,7 @@ export default function HeroSection() {
           transition={{ delay: 0.6, duration: 0.6 }}
         >
           <Link href="/services">
-            <button className="relative overflow-hidden !bg-gradient-to-r !from-[#0a1f4b] !to-[#0db1ff] !text-white !font-semibold px-8 py-3 !text-lg !rounded-full shadow-lg !transition-all !duration-300 hover:!scale-105 hover:!shadow-[0_0_25px_rgba(10,31,75,0.6)]">
+            <button className="relative overflow-hidden !bg-gradient-to-r !from-[#2A338E] !to-[#B52B32] !text-white !font-semibold px-8 py-3 !text-lg !rounded-full shadow-lg !transition-all !duration-300 hover:!scale-105 hover:!shadow-[0_0_25px_rgba(42,51,142,0.6)]">
               Explore Our Services
             </button>
           </Link>

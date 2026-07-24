@@ -43,12 +43,12 @@ export default function ContactSection() {
   };
 
   return (
-    <section className="relative !py-20 !bg-gradient-to-b from-[#f8fafc] via-white to-[#e8f4fd] overflow-hidden">
+    <section className="relative !py-20 !bg-gradient-to-b from-[#f8f9ff] via-white to-[#eef0ff] overflow-hidden">
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {[...Array(20)].map((_, i) => (
           <motion.span
             key={i}
-            className="absolute w-2 h-2 rounded-full !bg-gradient-to-r from-[#0a1f4b] to-[#0db1ff] opacity-40 blur-[3px]"
+            className="absolute w-2 h-2 rounded-full !bg-gradient-to-r from-[#2A338E] to-[#B52B32] opacity-40 blur-[3px]"
             animate={{
               y: [0, -60, 0],
               x: [0, 30, 0],
@@ -76,7 +76,7 @@ export default function ContactSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: true }}
-          className="!text-3xl md:!text-4xl !font-extrabold text-center !text-[#0a1f4b] !mb-14"
+          className="!text-3xl md:!text-4xl !font-extrabold text-center !text-[#2A338E] !mb-14"
         >
           Get in Touch
         </motion.h2>
@@ -90,7 +90,7 @@ export default function ContactSection() {
             viewport={{ once: true }}
             className="text-center md:!text-left"
           >
-            <h3 className="!text-2xl !font-bold !text-[#0a1f4b] mb-6">
+            <h3 className="!text-2xl !font-bold !text-[#2A338E] mb-6">
               Connect with Top Biz LLP
             </h3>
             <p className="!text-gray-700 !text-base md:!text-lg mb-8 leading-relaxed">
@@ -101,19 +101,19 @@ export default function ContactSection() {
 
             <div className="flex flex-col gap-4">
               <div className="flex items-center gap-3">
-                <FaPhoneAlt className="!text-[#0db1ff] !text-xl" />
+                <FaPhoneAlt className="!text-[#B52B32] !text-xl" />
                 <span className="!text-gray-700 !font-medium">
                   +92 51 8777600
                 </span>
               </div>
               <div className="flex items-center gap-3">
-                <FaEnvelope className="!text-[#0db1ff] !text-xl" />
+                <FaEnvelope className="!text-[#B52B32] !text-xl" />
                 <span className="!text-gray-700 !font-medium">
                   info@topbizllp.pk
                 </span>
               </div>
               <div className="flex items-center text-left gap-3">
-                <FaCommentDots className="!text-[#0db1ff] !text-xl" />
+                <FaCommentDots className="!text-[#B52B32] !text-xl" />
                 <span className="!text-gray-700 !font-medium">
                   761, Lane 7-E, Gulistan Colony, Near Joyland, Rawalpindi
                 </span>
@@ -127,7 +127,7 @@ export default function ContactSection() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
             viewport={{ once: true }}
-            className="!bg-white !p-8 !rounded-2xl !shadow-[0_0_25px_rgba(10,31,75,0.15)] border-t-4 border-[#0a1f4b]"
+            className="!bg-white !p-8 !rounded-2xl !shadow-[0_0_25px_rgba(42,51,142,0.15)] border-t-4 border-[#2A338E]"
           >
             <Form form={form} layout="vertical" onFinish={onFinish}>
               <Form.Item
@@ -192,7 +192,7 @@ export default function ContactSection() {
                     htmlType="submit"
                     size="large"
                     loading={loading}
-                    className="!w-full !bg-gradient-to-r !from-[#0a1f4b] !to-[#0db1ff] hover:!opacity-90 
+                    className="!w-full !bg-gradient-to-r !from-[#2A338E] !to-[#B52B32] hover:!opacity-90 
                     !rounded-full !text-white !font-semibold !shadow-md !transition-all !duration-300 flex items-center justify-center gap-2"
                   >
                     Send Message <FaCommentDots />

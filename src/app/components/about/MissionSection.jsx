@@ -6,7 +6,7 @@ export default function MissionSection() {
   return (
     <section className="!relative !py-20 !bg-gradient-to-br !from-gray-900 !to-gray-800 !overflow-hidden">
       {/* Decorative circles */}
-      <div className="!absolute !top-10 !left-10 !w-32 !h-32 !bg-[#0db1ff]/20 !rounded-full !blur-3xl"></div>
+      <div className="!absolute !top-10 !left-10 !w-32 !h-32 !bg-blue-600/20 !rounded-full !blur-3xl"></div>
       <div className="!absolute !bottom-10 !right-10 !w-40 !h-40 !bg-cyan-500/20 !rounded-full !blur-3xl"></div>
 
       <div className="!relative !max-w-[1440px] !w-full !mx-auto !px-6 !flex !flex-col md:!flex-row !items-center !gap-12">
@@ -32,7 +32,7 @@ export default function MissionSection() {
           transition={{ duration: 0.8 }}
         >
           <h2 className="!text-3xl md:!text-4xl !font-extrabold !mb-6 !flex !items-center !gap-3">
-            <FaRocket className="!text-[#0db1ff] !text-4xl" />
+            <FaRocket className="!text-blue-400 !text-4xl" />
             Our Mission
           </h2>
 

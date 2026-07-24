@@ -5,7 +5,7 @@ import { FaBuilding } from "react-icons/fa";
 
 export default function AboutSection() {
   return (
-    <section className="!relative !py-24 !bg-gradient-to-br !from-[#0a1f4b] !via-[#0a1f4b] !to-[#0db1ff] !overflow-hidden">
+    <section className="!relative !py-24 !bg-gradient-to-br !from-[#1E3A8A] !via-[#2A338E] !to-[#B52B32] !overflow-hidden">
       {/* Animated gradient overlay */}
       <div className="!absolute !inset-0 !opacity-25 !pointer-events-none">
         <motion.div
@@ -45,7 +45,7 @@ export default function AboutSection() {
             <div className="!flex !flex-col !gap-6 !text-gray-700 !text-base !leading-relaxed">
               <p>
                 Welcome to{" "}
-                <span className="!font-semibold !text-[#0a1f4b]">
+                <span className="!font-semibold !text-[#2A338E]">
                   Top Biz LLP
                 </span>
                 , your trusted partner for General Order Supplies,
@@ -63,7 +63,7 @@ export default function AboutSection() {
               </p>
               <p>
                 Through our JV Partner companies,{" "}
-                <span className="!font-semibold !text-[#0db1ff]">Top Biz</span>{" "}
+                <span className="!font-semibold !text-[#B52B32]">Top Biz</span>{" "}
                 is also engaged in Electronics, Electrical, Mechanical, R&D, and
                 Naval Engineering projects, supplying marine electrical systems,
                 control equipment, and automation solutions.
@@ -83,7 +83,7 @@ export default function AboutSection() {
         {[...Array(10)].map((_, i) => (
           <motion.span
             key={i}
-            className="!absolute !w-4 !h-4 !rounded-full !bg-gradient-to-r !from-[#0a1f4b] !to-[#0db1ff] !opacity-30 !blur-[3px]"
+            className="!absolute !w-4 !h-4 !rounded-full !bg-gradient-to-r !from-[#2A338E] !to-[#B52B32] !opacity-30 !blur-[3px]"
             animate={{
               y: [0, -70, 0],
               x: [0, 40, 0],

@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 export default function AboutSection() {
   return (
-    <section className="!py-20 bg-gradient-to-b from-[#f8fafc] via-white to-[#e8f4fd] custom_link">
+    <section className="!py-20 bg-gradient-to-b from-[#f8f9ff] via-white to-[#eef0ff] custom_link">
       <div className="max-w-[1440px] w-full mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           {/* Text Content */}
@@ -16,7 +16,7 @@ export default function AboutSection() {
             viewport={{ once: true }}
             className="!order-last md:!order-first text-center md:!text-left flex flex-col gap-3"
           >
-            <h2 className="!text-3xl md:!text-4xl !font-extrabold !text-[#0a1f4b] mb-6 !leading-tight">
+            <h2 className="!text-3xl md:!text-4xl !font-extrabold !text-[#2A338E] mb-6 !leading-tight">
               About Top Biz LLP
             </h2>
             <div className="flex flex-col gap-2">
@@ -50,9 +50,9 @@ export default function AboutSection() {
               <motion.button
                 whileHover={{
                   scale: 1.05,
-                  boxShadow: "0 0 25px rgba(10,31,75,0.6)",
+                  boxShadow: "0 0 25px rgba(42,51,142,0.6)",
                 }}
-                className="!bg-gradient-to-r mx-auto md:!mx-0 !from-[#0a1f4b] !to-[#0db1ff] !text-white !font-semibold px-6 py-3 !rounded-full flex items-center gap-2 !transition-all !duration-300"
+                className="!bg-gradient-to-r mx-auto md:!mx-0 !from-[#2A338E] !to-[#B52B32] !text-white !font-semibold px-6 py-3 !rounded-full flex items-center gap-2 !transition-all !duration-300"
               >
                 Learn More <FaArrowRight />
               </motion.button>

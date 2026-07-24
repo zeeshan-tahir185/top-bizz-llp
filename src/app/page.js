@@ -1,5 +1,10 @@
 import React from 'react'
-import LandingPage from './components/home/LandingPage'
+import HeroSection from './components/home/HeroSection'
+import AboutSection from './components/home/AboutSection'
+import PartnersSection from './components/home/PartnersSection'
+import ServicesSection from './components/home/ServicesSection'
+import ContactSection from './shared/ContactSection'
+import HomeGallery from './components/home/HomeGallery'
 import Navbar from './shared/Navbar'
 import Footer from './shared/Footer'
 
@@ -7,7 +12,12 @@ const page = () => {
   return (
     <div className='pt-[90px]'>
       <Navbar />
-      <LandingPage />
+      <HeroSection />
+      <AboutSection />
+      {/* <PartnersSection /> */}
+      <ServicesSection />
+      <HomeGallery />
+      <ContactSection />
       <Footer />
     </div>
   )
