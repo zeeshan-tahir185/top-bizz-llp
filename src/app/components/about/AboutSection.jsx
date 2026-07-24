@@ -32,7 +32,7 @@ export default function AboutSection() {
           <FaBuilding className="!text-white !text-4xl !drop-shadow-md" />
           <span className="!bg-clip-text !text-transparent !bg-gradient-to-r !from-white !to-gray-200">
             About Top Biz LLP
-          </span>
+          </span> 
         </motion.h2>
 
         {/* Card Section */}
