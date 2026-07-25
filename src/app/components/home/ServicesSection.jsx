@@ -9,36 +9,36 @@ export default function ServicesSection() {
       title: "Robotics & Automation Solutions",
       description:
         "We supply cutting-edge robotics and drones, alongside custom R&D solutions, to enhance industrial automation and surveillance with advanced technology.",
-      icon: <FaRobot className="!text-4xl !text-[#2A338E]" />,
+      icon: <FaRobot className="!text-4xl !text-[#0db1ff]" />,
     },
     {
       title: "Electronics Engineering Services",
       description:
         "Our expertise in RF circuits, DSP, FPGA design, and embedded systems delivers innovative solutions for military, medical, and commercial applications.",
-      icon: <FaMicrochip className="!text-4xl !text-[#2A338E]" />,
+      icon: <FaMicrochip className="!text-4xl !text-[#0db1ff]" />,
     },
     {
       title: "Naval Engineering & Platform Integration",
       description:
         "Our engineering division provides design support, integration, and modernization services for naval vessels and marine platforms.",
-      icon: <FaShip className="!text-4xl !text-[#2A338E]" />,
+      icon: <FaShip className="!text-4xl !text-[#0db1ff]" />,
     },
     {
       title: "Legacy Systems Modernisation & Reverse Engineering",
       description:
         "We restore, upgrade, and re-engineer obsolete naval and marine subsystems through advanced reverse-engineering tools.",
-      icon: <FaTools className="!text-4xl !text-[#2A338E]" />,
+      icon: <FaTools className="!text-4xl !text-[#0db1ff]" />,
     },
   ];
 
   return (
-    <section className="!py-20 !bg-gradient-to-b from-white via-[#f8f9ff] to-[#eef0ff] relative overflow-hidden">
+    <section className="!py-20 !bg-gradient-to-b from-white via-[#f8fafc] to-[#e8f4fd] relative overflow-hidden">
       {/* Floating gradient particles for cinematic background animation */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {[...Array(20)].map((_, i) => (
           <motion.span
             key={i}
-            className="absolute w-2 h-2 rounded-full !bg-gradient-to-r from-[#2A338E] to-[#B52B32] opacity-40 blur-[3px]"
+            className="absolute w-2 h-2 rounded-full !bg-gradient-to-r from-[#0a1f4b] to-[#0db1ff] opacity-40 blur-[3px]"
             animate={{
               y: [0, -60, 0],
               x: [0, 30, 0],
@@ -66,7 +66,7 @@ export default function ServicesSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: true }}
-          className="!text-3xl md:!text-4xl !font-extrabold !text-[#2A338E] text-center !mb-14"
+          className="!text-3xl md:!text-4xl !font-extrabold !text-[#0a1f4b] text-center !mb-14"
         >
           Our Services
         </motion.h2>
@@ -87,13 +87,13 @@ export default function ServicesSection() {
               whileHover={{
                 scale: 1.05,
                 boxShadow:
-                  "0 0 35px rgba(42,51,142,0.25), 0 0 50px rgba(181,43,50,0.15)",
+                  "0 0 35px rgba(10,31,75,0.25), 0 0 50px rgba(13,177,255,0.15)",
               }}
               className="!bg-white/80 !backdrop-blur-sm !rounded-2xl !shadow-lg !p-6 flex flex-col items-center text-center 
-              !transition-all !duration-300 border border-transparent hover:!border-[#2A338E]/20 hover:!bg-white"
+              !transition-all !duration-300 border border-transparent hover:!border-[#0a1f4b]/20 hover:!bg-white"
             >
               <div className="!mb-4">{service.icon}</div>
-              <h3 className="!text-xl !font-semibold !text-[#2A338E] !mb-3">
+              <h3 className="!text-xl !font-semibold !text-[#0a1f4b] !mb-3">
                 {service.title}
               </h3>
               <p className="!text-gray-700 !text-base leading-relaxed">
@@ -109,9 +109,9 @@ export default function ServicesSection() {
             <motion.button
               whileHover={{
                 scale: 1.05,
-                boxShadow: "0 0 25px rgba(42,51,142,0.5)",
+                boxShadow: "0 0 25px rgba(10,31,75,0.5)",
               }}
-              className="!bg-gradient-to-r !from-[#2A338E] !to-[#B52B32] !text-white !font-semibold px-10 py-3 !rounded-full 
+              className="!bg-gradient-to-r !from-[#0a1f4b] !to-[#0db1ff] !text-white !font-semibold px-10 py-3 !rounded-full 
               !transition-all !duration-300 !shadow-md hover:!shadow-lg"
             >
               View All Services

@@ -24,7 +24,7 @@ const HomeGallery = () => {
   };
 
   return (
-    <section className="relative !py-20 bg-gradient-to-b from-[#f8f9ff] via-white to-[#eef0ff] overflow-hidden">
+    <section className="relative !py-20 bg-gradient-to-b from-[#f8fafc] via-white to-[#e8f4fd] overflow-hidden">
       {/* ✅ Background animation removed */}
 
       {/* Section Content */}
@@ -35,7 +35,7 @@ const HomeGallery = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: true }}
-          className="!text-3xl md:!text-4xl !font-extrabold text-center !text-[#2A338E] !mb-14"
+          className="!text-3xl md:!text-4xl !font-extrabold text-center !text-[#0a1f4b] !mb-14"
         >
           Our Gallery
         </motion.h1>
@@ -65,9 +65,9 @@ const HomeGallery = () => {
               whileHover={{
                 scale: 1.05,
                 boxShadow:
-                  "0 0 25px rgba(42,51,142,0.3), 0 0 35px rgba(181,43,50,0.15)",
+                  "0 0 25px rgba(10,31,75,0.3), 0 0 35px rgba(13,177,255,0.15)",
               }}
-              className="break-inside-avoid overflow-hidden rounded-xl !shadow-lg hover:!shadow-[0_0_25px_rgba(42,51,142,0.3)] 
+              className="break-inside-avoid overflow-hidden rounded-xl !shadow-lg hover:!shadow-[0_0_25px_rgba(10,31,75,0.3)] 
                 !transition-all !duration-300 cursor-pointer"
               onClick={() => showModal(src)}
             >
@@ -87,9 +87,9 @@ const HomeGallery = () => {
             <motion.button
               whileHover={{
                 scale: 1.05,
-                boxShadow: "0 0 25px rgba(42,51,142,0.5)",
+                boxShadow: "0 0 25px rgba(10,31,75,0.5)",
               }}
-              className="!bg-gradient-to-r !from-[#2A338E] !to-[#B52B32] !text-white !font-semibold px-10 py-3 
+              className="!bg-gradient-to-r !from-[#0a1f4b] !to-[#0db1ff] !text-white !font-semibold px-10 py-3 
               !rounded-full !transition-all !duration-300 !shadow-md hover:!shadow-lg"
             >
               View All Gallery

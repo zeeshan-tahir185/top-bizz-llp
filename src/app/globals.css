@@ -7,3 +7,154 @@
 .custom_link a{
     text-decoration: none;
 }
+
+/* ================================================================
+   New landing page theme (adapted from the new site design)
+   Scoped under .tb-landing so it never leaks into other pages.
+   ================================================================ */
+.tb-landing{
+  --bs-primary: #0db1ff;      /* cyan accent */
+  --bs-secondary: #0a1f4b;    /* deep navy */
+  --bs-dark: #0b1120;
+  --brand-gradient: linear-gradient(90deg, #0a1f4b, #0db1ff);
+  scroll-behavior: smooth;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+  color: #1e293b;
+}
+
+/* Higher specificity than Tailwind's .container utility so the landing
+   sections stay centered like the original Bootstrap layout. */
+.tb-landing .container{
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.tb-landing .btn-primary{ background-image: var(--brand-gradient); border: none; }
+.tb-landing .btn-primary:hover{ filter: brightness(1.05); }
+.tb-landing .btn-outline-primary{ border-color: var(--bs-primary); color: var(--bs-primary); }
+.tb-landing .btn-outline-primary:hover{ background-color: var(--bs-primary); color: #fff; }
+
+.tb-landing .section-title{ margin-bottom: 1rem; color: var(--bs-secondary); font-weight: 700; }
+.tb-landing .lead{ color: #334155; }
+.tb-landing .link-primary{ color: var(--bs-primary) !important; text-decoration: none; }
+.tb-landing .text-bg-primary{ background-color: var(--bs-primary) !important; }
+
+.tb-landing .hero{
+  background: radial-gradient(1200px 600px at 80% -20%, rgba(13,177,255,.18), transparent 60%),
+              radial-gradient(1000px 500px at -10% 10%, rgba(10,31,75,.18), transparent 60%),
+              #f8fafc;
+}
+
+.tb-landing .card{ border: 1px solid #eef2f7; }
+.tb-landing .card .bi{ font-size: 1.5rem; color: var(--bs-primary); }
+
+.tb-landing .badge-pill{ border-radius: 999px; padding: .5rem .75rem; }
+
+.tb-landing .text-gradient{
+  background: var(--brand-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.tb-landing .form-control:focus{
+  border-color: #0db1ff;
+  box-shadow: 0 0 0 .2rem rgba(13,177,255,.15);
+}
+
+.tb-landing .pricing-card .price{ font-size: 1.25rem; }
+.tb-landing .accordion-button:not(.collapsed){ color: var(--bs-secondary); background-color: rgba(13,177,255,.08); }
+.tb-landing .accordion-button:focus{ box-shadow: 0 0 0 .2rem rgba(13,177,255,.15); }
+
+@media (min-width: 992px){
+  .tb-landing .hero .display-5{ font-size: 3rem; }
+}
+
+/* Header / navbar (new site design) */
+.tb-navbar{ min-height: 90px; }
+.tb-navbar .navbar-brand img{ height: 46px; width: auto; }
+.tb-navbar .navbar-brand span{ color: var(--bs-secondary); letter-spacing: .2px; }
+.tb-navbar .nav-link{ color: #0a1f4b; font-weight: 500; }
+.tb-navbar .nav-link:hover,
+.tb-navbar .nav-link.active{ color: var(--bs-primary); }
+.tb-navbar.nav-shadow{ box-shadow: 0 6px 24px rgba(0,0,0,.06); }
+
+/* Footer (new site design) */
+.tb-footer a{ text-decoration: none; }
+.tb-footer .logo{ height: 40px; width: auto; }
+
+/* FAQ answer body (React-controlled, independent of Bootstrap collapse) */
+.tb-landing .tb-faq-body{
+  color: #334155;
+  border-top: 1px solid #eef2f7;
+  animation: tb-faq-in .25s ease;
+}
+@keyframes tb-faq-in{
+  from{ opacity: 0; transform: translateY(-6px); }
+  to{ opacity: 1; transform: none; }
+}
+
+/* Industries cards */
+.tb-landing .tb-industry-card{
+  border: 1px solid #eef2f7;
+  box-shadow: 0 4px 14px rgba(10,31,75,.05);
+  transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+}
+.tb-landing .tb-industry-card:hover{
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(10,31,75,.12);
+  border-color: rgba(13,177,255,.35);
+}
+.tb-landing .tb-industry-icon{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #0a1f4b, #0db1ff);
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(13,177,255,.25);
+}
+.tb-landing .tb-industry-icon i{ font-size: 1.6rem; line-height: 1; }
+.tb-landing .tb-industry-card:hover .tb-industry-icon{ transform: scale(1.06); }
+
+/* Partner logos marquee — two identical groups for a seamless infinite loop */
+.tb-marquee{
+  display: flex;
+  gap: 4rem;                 /* gap between the two groups (must match group gap) */
+  overflow: hidden;
+  user-select: none;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+          mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+}
+.tb-marquee__group{
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 4rem;
+  min-width: 100%;
+  animation: tb-marquee-scroll 40s linear infinite;
+}
+.tb-marquee:hover .tb-marquee__group{ animation-play-state: paused; }
+.tb-marquee__item img{
+  height: 68px;
+  width: auto;
+  object-fit: contain;
+  transition: transform .3s ease;
+}
+.tb-marquee__item:hover img{
+  transform: scale(1.1);
+}
+@keyframes tb-marquee-scroll{
+  from{ transform: translateX(0); }
+  to{ transform: translateX(calc(-100% - 4rem)); } /* group width + the between-groups gap */
+}
+@media (prefers-reduced-motion: reduce){
+  .tb-marquee__group{ animation: none; }
+}
