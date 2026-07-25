@@ -29,7 +29,7 @@ export default function Navbar() {
           <img
             src="/images/logo.png"
             alt="Top Biz LLP"
-            className="!h-[42px] !w-auto !object-contain"
+            className="!h-[56px] !w-auto !object-contain"
           />
         </Link>
 

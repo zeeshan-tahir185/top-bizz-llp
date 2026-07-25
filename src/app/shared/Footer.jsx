@@ -28,7 +28,7 @@ export default function Footer() {
               <img
                 src="/images/logo.png"
                 alt="Top Biz LLP logo"
-                className="w-[150px] object-contain"
+                className="!h-[56px] !w-auto object-contain"
               />
             </Link>
             <p className="text-sm max-w-md mb-4">
