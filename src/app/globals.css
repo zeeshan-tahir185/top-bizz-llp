@@ -143,17 +143,13 @@
 }
 .tb-marquee:hover .tb-marquee__group{ animation-play-state: paused; }
 .tb-marquee__item img{
-  height: 52px;
+  height: 68px;
   width: auto;
   object-fit: contain;
-  opacity: .5;
-  filter: grayscale(1);
-  transition: opacity .3s ease, filter .3s ease, transform .3s ease;
+  transition: transform .3s ease;
 }
 .tb-marquee__item:hover img{
-  opacity: 1;
-  filter: grayscale(0);
-  transform: scale(1.08);
+  transform: scale(1.1);
 }
 @keyframes tb-marquee-scroll{
   from{ transform: translateX(0); }

@@ -16,6 +16,7 @@ const partners = [
   { name: "Qualys", logo: "/images/partners/logos/qualys.svg" },
   { name: "VMware", logo: "/images/partners/logos/vmware.svg" },
   { name: "Oracle", logo: "/images/partners/logos/oracle.svg" },
+  { name: "SonarQube", logo: "/images/partners/logos/sonarqube.svg" },
 ];
 
 const faqs = [
