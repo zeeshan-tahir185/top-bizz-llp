@@ -1,11 +1,43 @@
 "use client";
+import { useState } from "react";
 
 // New landing page design (adapted from the new site build), rebranded for
 // Top Biz LLP. Theme is scoped under the `.tb-landing` wrapper (see globals.css)
 // so it does not affect the rest of the site. The header/navbar and footer are
 // intentionally NOT rendered here — the existing shared Navbar/Footer are used
 // by the page so linking stays exactly as on the current site.
+const partners = [
+  { name: "Amazon Web Services", logo: "/images/partners/logos/aws.svg" },
+  { name: "Fortinet", logo: "/images/partners/logos/fortinet.svg" },
+  { name: "Kaspersky", logo: "/images/partners/logos/kaspersky.svg" },
+  { name: "Dell", logo: "/images/partners/logos/dell.svg" },
+  { name: "Cisco", logo: "/images/partners/logos/cisco.svg" },
+  { name: "Akamai", logo: "/images/partners/logos/akamai.svg" },
+  { name: "Qualys", logo: "/images/partners/logos/qualys.svg" },
+  { name: "VMware", logo: "/images/partners/logos/vmware.svg" },
+  { name: "Oracle", logo: "/images/partners/logos/oracle.svg" },
+];
+
+const faqs = [
+  {
+    q: "Do you work with on-prem and cloud?",
+    a: "Yes. We design hybrid architectures, integrate with existing systems, and migrate workloads when appropriate.",
+  },
+  {
+    q: "Can you operate our environment after delivery?",
+    a: "Yes. Our managed services provide 24×7 monitoring, incident response, and monthly reporting with KPIs.",
+  },
+  {
+    q: "How do we start?",
+    a: "Book a 30-minute scoping call. We agree on goals, success criteria, and next steps, then share a concise proposal.",
+  },
+];
+
 export default function LandingPage() {
+  // FAQ accordion controlled by React state (avoids the Bootstrap JS collapse
+  // conflict that caused the answer to flash open then hide).
+  const [openFaq, setOpenFaq] = useState(0);
+
   const handleContactSubmit = (e) => {
     e.preventDefault();
     const form = e.currentTarget;
@@ -222,36 +254,51 @@ export default function LandingPage() {
       <section id="industries" className="py-5">
         <div className="container">
           <h2 className="section-title">Industries</h2>
+          <p className="text-muted mb-4">
+            Trusted across sectors with secure, scalable, and compliant
+            solutions.
+          </p>
           <div className="row g-4">
             {[
               {
+                icon: "bi-bank",
                 title: "Government",
                 text: "Secure platforms, data protection, and compliance for public services and citizen scale systems.",
               },
               {
+                icon: "bi-cash-coin",
                 title: "Finance",
                 text: "Resilient, auditable systems with strong controls for payments, banking, and fintech workloads.",
               },
               {
+                icon: "bi-heart-pulse",
                 title: "Healthcare",
                 text: "Privacy-first architectures, access controls, and secure data exchange for clinical systems.",
               },
               {
+                icon: "bi-buildings",
                 title: "Enterprise",
                 text: "Hybrid cloud, collaboration, and security at scale for distributed teams and branches.",
               },
               {
+                icon: "bi-mortarboard",
                 title: "Education",
                 text: "Campus networks, LMS integrations, and secure identity for students and staff.",
               },
               {
+                icon: "bi-broadcast-pin",
                 title: "Telecom",
                 text: "Carrier grade routing, security perimeters, and observability for high-throughput networks.",
               },
             ].map((ind) => (
               <div className="col-md-6 col-lg-4" key={ind.title}>
-                <h6 className="fw-semibold">{ind.title}</h6>
-                <p className="text-muted small">{ind.text}</p>
+                <div className="tb-industry-card h-100 p-4 rounded-4 bg-white">
+                  <div className="tb-industry-icon mb-3">
+                    <i className={`bi ${ind.icon}`}></i>
+                  </div>
+                  <h6 className="fw-semibold mb-2">{ind.title}</h6>
+                  <p className="text-muted small mb-0">{ind.text}</p>
+                </div>
               </div>
             ))}
           </div>
@@ -266,14 +313,20 @@ export default function LandingPage() {
             We work across leading platforms and OEMs to deliver the right fit
             for your environment.
           </p>
-          <div className="row row-cols-2 row-cols-md-4 g-4 text-center align-items-center">
-            {["AWS", "Azure", "Fortinet", "Kaspersky", "Dell", "H3C", "Akamai", "Qualys"].map(
-              (p) => (
-                <div className="col" key={p}>
-                  <span className="text-muted">{p}</span>
-                </div>
-              )
-            )}
+        </div>
+        {/* Logo marquee (scrolls right-to-left, pauses on hover).
+            Two identical groups animate together for a seamless infinite loop. */}
+        <div className="container">
+          <div className="tb-marquee">
+            {[0, 1].map((g) => (
+              <div className="tb-marquee__group" key={g} aria-hidden={g === 1}>
+                {partners.map((p, i) => (
+                  <div className="tb-marquee__item" key={`${g}-${p.name}-${i}`}>
+                    <img src={p.logo} alt={p.name} loading="lazy" />
+                  </div>
+                ))}
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -375,81 +428,26 @@ export default function LandingPage() {
         <div className="container">
           <h2 className="section-title">FAQ</h2>
           <div className="accordion" id="faqAcc">
-            <div className="accordion-item">
-              <h2 className="accordion-header" id="q1">
-                <button
-                  className="accordion-button"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#a1"
-                  aria-expanded="true"
-                  aria-controls="a1"
-                >
-                  Do you work with on-prem and cloud?
-                </button>
-              </h2>
-              <div
-                id="a1"
-                className="accordion-collapse collapse show"
-                aria-labelledby="q1"
-                data-bs-parent="#faqAcc"
-              >
-                <div className="accordion-body">
-                  Yes. We design hybrid architectures, integrate with existing
-                  systems, and migrate workloads when appropriate.
+            {faqs.map((f, i) => {
+              const open = openFaq === i;
+              return (
+                <div className="accordion-item" key={i}>
+                  <h2 className="accordion-header">
+                    <button
+                      className={`accordion-button ${open ? "" : "collapsed"}`}
+                      type="button"
+                      aria-expanded={open}
+                      onClick={() => setOpenFaq(open ? -1 : i)}
+                    >
+                      {f.q}
+                    </button>
+                  </h2>
+                  {open && (
+                    <div className="accordion-body tb-faq-body">{f.a}</div>
+                  )}
                 </div>
-              </div>
-            </div>
-            <div className="accordion-item">
-              <h2 className="accordion-header" id="q2">
-                <button
-                  className="accordion-button collapsed"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#a2"
-                  aria-expanded="false"
-                  aria-controls="a2"
-                >
-                  Can you operate our environment after delivery?
-                </button>
-              </h2>
-              <div
-                id="a2"
-                className="accordion-collapse collapse"
-                aria-labelledby="q2"
-                data-bs-parent="#faqAcc"
-              >
-                <div className="accordion-body">
-                  Yes. Our managed services provide 24×7 monitoring, incident
-                  response, and monthly reporting with KPIs.
-                </div>
-              </div>
-            </div>
-            <div className="accordion-item">
-              <h2 className="accordion-header" id="q3">
-                <button
-                  className="accordion-button collapsed"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#a3"
-                  aria-expanded="false"
-                  aria-controls="a3"
-                >
-                  How do we start?
-                </button>
-              </h2>
-              <div
-                id="a3"
-                className="accordion-collapse collapse"
-                aria-labelledby="q3"
-                data-bs-parent="#faqAcc"
-              >
-                <div className="accordion-body">
-                  Book a 30-minute scoping call. We agree on goals, success
-                  criteria, and next steps, then share a concise proposal.
-                </div>
-              </div>
-            </div>
+              );
+            })}
           </div>
         </div>
       </section>

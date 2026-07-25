@@ -36,12 +36,12 @@ export default function Footer() {
               solutions, software development, and more.
             </p>
             <p className="text-sm mb-1">
-              <a className="hover:text-[#0db1ff] transition-colors" href="mailto:info@topbizllp.pk">
+              <a className="!text-white hover:!text-[#0db1ff] transition-colors" href="mailto:info@topbizllp.pk">
                 info@topbizllp.pk
               </a>
             </p>
             <p className="text-sm">
-              <a className="hover:text-[#0db1ff] transition-colors" href="tel:+92518777600">
+              <a className="!text-white hover:!text-[#0db1ff] transition-colors" href="tel:+92518777600">
                 +92 51 8777600
               </a>
             </p>
@@ -55,7 +55,7 @@ export default function Footer() {
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="hover:text-[#0db1ff] transition-colors"
+                    className="!text-white hover:!text-[#0db1ff] transition-colors"
                   >
                     {link.name}
                   </Link>
