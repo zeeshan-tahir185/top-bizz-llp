@@ -4,16 +4,50 @@ import { Image, Modal } from 'antd';
 import 'antd/dist/reset.css';
 
 const images = [
-  '/images/data/img38.jpeg','/images/data/img40.jpeg','/images/data/img4.jpg', '/images/data/img5.jpg', '/images/data/img6.jpg',
-  '/images/data/img7.jpg', '/images/data/img8.jpg', '/images/data/img36.png', '/images/data/img9.jpg',
-  '/images/data/img10.jpg', '/images/data/img11.jpg','/images/data/img41.jpeg', '/images/data/img42.jpeg','/images/data/img43.jpeg','/images/data/img44.jpeg', '/images/data/img12.jpg',
-  '/images/data/img1.jpg','/images/data/img39.jpeg','/images/data/img35.png', '/images/data/img2.jpg', '/images/data/img3.jpg','/images/data/img45.jpeg','/images/data/img46.jpeg','/images/data/img47.jpeg',
-  '/images/data/img23.jpg','/images/data/img37.png', 
-  '/images/data/img13.jpg', '/images/data/img14.jpg', '/images/data/img15.jpg',
-  '/images/data/img16.jpg', '/images/data/img34.png', '/images/data/img17.jpg', '/images/data/img18.jpg',
-  '/images/data/img19.jpg', '/images/data/img20.jpg', '/images/data/img21.jpg','/images/data/img48.jpeg','/images/data/img49.jpeg',
-  '/images/data/img22.jpg', '/images/data/img24.jpg',
-  '/images/data/img25.jpg', '/images/data/img26.jpg',  '/images/data/img30.jpg',
+  // --- Certificate images commented out per client request ---
+  // '/images/data/img38.jpeg', // Canon certificate
+  // '/images/data/img40.jpeg', // Kaspersky certificate
+  '/images/data/img4.jpg',
+  '/images/data/img5.jpg',
+  '/images/data/img6.jpg',
+  '/images/data/img7.jpg',
+  '/images/data/img8.jpg',
+  '/images/data/img36.png',
+  '/images/data/img9.jpg',
+  '/images/data/img10.jpg',
+  '/images/data/img11.jpg',
+  // '/images/data/img41.jpeg', // SMSGlobal certificate
+  // '/images/data/img42.jpeg', // Supplier certificate
+  // '/images/data/img43.jpeg', // Canon certificate
+  // '/images/data/img44.jpeg', // Logitech certificate
+  '/images/data/img12.jpg',
+  '/images/data/img1.jpg',
+  // '/images/data/img39.jpeg', // Logitech certificate
+  '/images/data/img35.png',
+  '/images/data/img2.jpg',
+  '/images/data/img3.jpg',
+  // '/images/data/img45.jpeg', // Lenovo certificate
+  // '/images/data/img46.jpeg', // Dell OEM certificate
+  // '/images/data/img47.jpeg', // Dell OEM certificate
+  '/images/data/img23.jpg',
+  '/images/data/img37.png',
+  '/images/data/img13.jpg',
+  '/images/data/img14.jpg',
+  '/images/data/img15.jpg',
+  '/images/data/img16.jpg',
+  '/images/data/img34.png',
+  '/images/data/img17.jpg',
+  '/images/data/img18.jpg',
+  '/images/data/img19.jpg',
+  '/images/data/img20.jpg',
+  '/images/data/img21.jpg',
+  // '/images/data/img48.jpeg', // HPE Cloud Services certificate
+  // '/images/data/img49.jpeg', // Orbilon Software Development certificate
+  '/images/data/img22.jpg',
+  '/images/data/img24.jpg',
+  '/images/data/img25.jpg',
+  '/images/data/img26.jpg',
+  '/images/data/img30.jpg',
   '/images/data/img31.jpg',
 ];
 
